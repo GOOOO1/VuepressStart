@@ -2,8 +2,19 @@
 
 //导航栏
 module.exports = {
-    themeConfig: {
+    base: '/VuepressStart/', // 仓库名
+    title: 'Dynamo', // 网站的标题，它将会被用作所有页面标题的前缀，同时，默认主题下，它将显示在导航栏（navbar）上
+    description: 'Vuepress-Start-Dynamo', 
+    head: [
+      ['meta', { name: 'author', content: 'Dynamo' }], // 网页F12检查时可以看到相关内容
+      ['meta', { name: 'keyword', content: 'Dynamo对vuepress的第一次尝试' }],
+      ['link', { rel: 'icon', href: '/assets/img/comeon.jpg' }], // 标签页的图标
+    ],
+
+    themeConfig: { // 主题
       logo: '/assets/img/hero.png', //左上角logo,导航栏左边logo
+      lastUpdated: '上一次更新时间：', // 获取每个文件最后一次 git 提交的 UNIX 时间戳(ms)，同时它将以合适的日期格式显示在每一页的底部
+
       nav: [
         { text: 'Home', link: '/' },
         { text: 'About', link: '/about/' },
@@ -34,7 +45,7 @@ module.exports = {
             ]
         },
       ],
-      sidebar: { //每个页面侧边栏都不一样
+      sidebar: { //每个页面侧边栏都不一样，要注意写的顺序，主页如果有只能写在最后面
         '/about/': [
             { // 与侧边栏分组嵌套使用
                 title: 'About',   // 必要的
