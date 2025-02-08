@@ -2,7 +2,7 @@
 
 //导航栏
 module.exports = {
-    base: '/VuepressStart/', // 仓库名
+    //base: '/VuepressStart/', // 仓库名
     title: 'Dynamo', // 网站的标题，它将会被用作所有页面标题的前缀，同时，默认主题下，它将显示在导航栏（navbar）上
     description: 'Vuepress-Start-Dynamo', 
     head: [
